@@ -1,0 +1,34 @@
+site_name: DriftWM Documentation
+site_url: https://wgparch.github.io/driftwm/
+repo_url: https://github.com/WgpArch/dotfiles
+repo_name: WgpArch/dotfiles
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: blue
+      accent: blue
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Keybinds: keybinds.md
+  - Waybar: waybar.md
+  - Theming: theming.md
+  - Gallery: gallery.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
