@@ -1,0 +1,11 @@
+image: python:latest
+
+pages:
+  script:
+    - pip install mkdocs mkdocs-material
+    - mkdocs build -d public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
