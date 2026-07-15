@@ -1,0 +1,283 @@
+/* ============================================
+   Waybar Style - Bluespaceship Theme for Cagebreak
+   Black background, Engine Blue borders (#00BFFF)
+   Dark Grey text (#909090)
+   ============================================ */
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Z003", "JetBrainsMono Nerd Font", "Font Awesome 7 Free";
+    font-size: 14px;
+    min-height: 0;
+}
+
+/* Main waybar window */
+window#waybar {
+    background-color: #000000;
+    color: #909090;
+    border-bottom: 2px solid #00BFFF;
+    margin: 0;
+    padding: 0;
+}
+
+/* All modules - rounded blocks */
+#dwltags,
+#clock,
+#custom-weather,
+#pulseaudio,
+#cpu,
+#temperature,
+#memory,
+#disk,
+#battery,
+#custom-launcher,
+#custom-notification,
+#tray,
+#custom-power,
+#custom-player {
+    background-color: #000000;
+    color: #909090;
+    border: 1px solid #00BFFF;
+    border-radius: 8px;
+    padding: 0 10px;
+    margin: 2px 4px;
+}
+
+/* Hover effect */
+#workspaces button:hover,
+#custom-launcher:hover,
+#clock:hover,
+#pulseaudio:hover,
+#battery:hover,
+#cpu:hover,
+#temperature:hover,
+#memory:hover,
+#disk:hover,
+#custom-power:hover,
+#custom-player:hover {
+    background-color: #0a0a0a;
+    border-color: #00CED1; 
+}
+
+/* Workspace buttons */
+#dwl-tags {
+    background-color: transparent;
+    padding: 0 5px;
+    margin: 0 5px;
+}
+
+#dwl-tags button {
+    padding: 2px 8px;
+    margin: 0 3px;
+    background-color: #000000;
+    border: 1px solid #00BFFF;
+    border-radius: 50%;
+    min-height: 20px;
+    color: #909090;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+#dwl-tags button:hover {
+    background-color: #00BFFF;
+    color: #000000;
+    border-color: #00CED1;
+}
+
+#dwl-tags button.focused {
+    background-color: #00BFFF;
+    color: #000000;
+    border-color: #00CED1;
+    font-weight: bold;
+}
+
+#dwl-tags button.urgent {
+    background-color: #FF4500;
+    border-color: #FF6347;
+    color: #000000;
+}
+
+/* Launcher */
+#custom-launcher {
+    background-color: #000000;
+    color: #909090;
+    border: 1px solid #00BFFF;
+    border-radius: 8px;
+    padding: 0 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#custom-launcher:hover {
+    background-color: #00BFFF;
+    color: #000000;
+}
+
+/* Clock */
+#clock {
+    background-color: #000000;
+    color: #909090;
+    border: 1px solid #00BFFF;
+    border-radius: 8px;
+    padding: 0 12px;
+    font-weight: 600;
+}
+
+/* Weather */
+#custom-weather {
+    background-color: #000000;
+    color: #909090;
+    border: 1px solid #00BFFF;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+/* PulseAudio */
+#pulseaudio {
+    background-color: #000000;
+    color: #909090;
+    border: 1px solid #00BFFF;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+#pulseaudio.muted {
+    background-color: #000000;
+    color: #FF6347;
+}
+
+/* Music Player */
+#custom-player {
+    background-color: #000000;
+    color: #909090;
+    border: 1px solid #00BFFF;
+    border-radius: 8px;
+    padding: 0 12px;
+    font-weight: 600;
+}
+
+/* Battery */
+#battery {
+    background-color: #000000;
+    color: #909090;
+    border: 1px solid #00BFFF;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+#battery.charging {
+    color: #00CED1; 
+}
+
+#battery.critical {
+    background-color: #000000;
+    color: #FF4500;
+    border-color: #FF4500;
+}
+
+/* CPU */
+#cpu {
+    background-color: #000000;
+    color: #909090;
+    border: 1px solid #00BFFF;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+/* Temperature */
+#temperature {
+    background-color: #000000;
+    color: #909090;
+    border: 1px solid #00BFFF;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+#temperature.critical {
+    color: #FF4500;
+    border-color: #FF4500;
+}
+
+/* Memory */
+#memory {
+    background-color: #000000;
+    color: #909090;
+    border: 1px solid #00BFFF;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+/* Disk */
+#disk {
+    background-color: #000000;
+    color: #909090;
+    border: 1px solid #00BFFF;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+/* Tray */
+#tray {
+    background-color: #000000;
+    border: 1px solid #00BFFF;
+    border-radius: 8px;
+    padding: 0 8px;
+    margin: 2px 4px;
+}
+
+/* Power button */
+#custom-power {
+    background-color: #000000;
+    color: #FF6347; 
+    border: 1px solid #00BFFF;
+    border-radius: 8px;
+    padding: 0 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#custom-power:hover {
+    background-color: #FF6347;
+    color: #000000;
+    border-color: #FF6347;
+}
+
+/* Tooltip styling */
+tooltip {
+    background-color: #000000;
+    border: 1px solid #00BFFF; 
+    border-radius: 8px;
+    padding: 8px;
+}
+
+tooltip label {
+    color: #909090;
+    font-family: "Z003", "JetBrainsMono Nerd Font", "Font Awesome 7 Free";
+    font-size: 13px;
+}
+
+/* Calendar tooltip */
+#calendar {
+    background-color: #000000;
+    color: #909090;
+    border: 1px solid #00BFFF; 
+    border-radius: 8px;
+    font-family: "Z003", "JetBrainsMono Nerd Font", "Font Awesome 7 Free";
+    font-size: 13px;
+}
+
+#calendar.today {
+    background-color: #00BFFF;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* Custom-notification */
+#custom-notification {
+    background-color: #000000;
+    color: #909090;
+    border: 1px solid #00BFFF;
+    border-radius: 6px;
+    padding: 0 8px;
+}
