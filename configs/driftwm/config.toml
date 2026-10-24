@@ -1,4 +1,3 @@
-
 # # driftwm configuration
 
 # # This file documents every built-in default.
@@ -107,7 +106,7 @@
 # touch_speed = 1.0           # touchscreen gesture pan speed multiplier
 # drift = 0.5                 # momentum coast: 0 = off, 0.5 = default, 1 = floatiest
 # animation_speed = 0.3       # camera lerp factor (higher = faster)
-# auto_navigate_on_close = true  # on close, pan to the newly focused window if off-screen
+  auto_navigate_on_close = true  # on close, pan to the newly focused window if off-screen
                               # false = camera stays put; focus only moves to a visible window
 # nudge_step = 20             # px per nudge-window action (mod-shift-arrow by default)
 # pan_step = 100.0            # px per pan-viewport action (mod-ctrl-arrow by default)
@@ -116,6 +115,23 @@
 # anchors = [[0, 0]]
 # # Example: 4 corners
 # # anchors = [[0, 0], [-1750, 1750], [1750, 1750], [1750, -1750], [-1750, -1750]]
+
+[navigation.bookmarks]
+"1" = [-4500, 3000]
+"2" = [-1500, 3000]
+"3" = [1500, 3000]
+"4" = [4500, 3000]
+"5" = [-4500, 0]
+"6" = [-1500, 0]
+"7" = [1500, 0]
+"8" = [4500, 0]
+"9" = [-4500, -3000]
+"10" = [-1500, -3000]
+"11" = [1500, -3000]
+"12" = [4500, -3000]
+"13" = [7500, 3000]
+"14" = [7500, 0]
+"15" = [7500, -3000]
 
 [navigation.edge_pan]
 # zone = 100.0                # activation zone width (px from viewport edge)
@@ -270,7 +286,8 @@
 
 # --- Essentials ---
 "mod+return" = "exec-terminal"
-"mod+d" = "exec rofi -show drun -theme /usr/share/rofi/themes/fancy.rasi"
+"mod+d" = "exec rofi -show drun -theme ~/.config/driftwm/rofi/fancy.rasi"
+"mod+shift+R" = "reload-config"
 "mod+q" = "close-window"
 "mod+f" = "toggle-fullscreen"
 "mod+m" = "fit-window"
@@ -285,28 +302,43 @@
 "mod+shift+left" = "nudge-window left"
 "mod+shift+right" = "nudge-window right"
 
-# --- 11 Canvas Bookmarks (3x4 Spatial Grid) ---
-# Top Row (Y = 3000)
-"mod+1" = "go-to -4500 3000"
-"mod+2" = "go-to -1500 3000"
-"mod+3" = "go-to 1500 3000"
-"mod+4" = "go-to 4500 3000"
+# --- Navigate to Bookmarks (Moves the CAMERA) ---
+"mod+1" = "go-to-bookmark 1"
+"mod+2" = "go-to-bookmark 2"
+"mod+3" = "go-to-bookmark 3"
+"mod+4" = "go-to-bookmark 4"
+"mod+5" = "go-to-bookmark 5"
+"mod+6" = "go-to-bookmark 6"
+"mod+7" = "go-to-bookmark 7"
+"mod+8" = "go-to-bookmark 8"
+"mod+9" = "go-to-bookmark 9"
+"mod+0" = "go-to-bookmark 10"
+"mod+minus" = "go-to-bookmark 11"
+"mod+equal" = "go-to-bookmark 12"
+"mod+F1" = "go-to-bookmark 13"
+"mod+F2" = "go-to-bookmark 14"
+"mod+F3" = "go-to-bookmark 15"
 
-# Middle Row (Y = 0)
-"mod+5" = "go-to -4500 0"
-"mod+6" = "go-to -1500 0"
-"mod+7" = "go-to 1500 0"
-"mod+8" = "go-to 4500 0"
+# --- Send Window to Bookmarks (Moves the WINDOW) ---
+"mod+shift+1" = "move-to-bookmark 1"
+"mod+shift+2" = "move-to-bookmark 2"
+"mod+shift+3" = "move-to-bookmark 3"
+"mod+shift+4" = "move-to-bookmark 4"
+"mod+shift+5" = "move-to-bookmark 5"
+"mod+shift+6" = "move-to-bookmark 6"
+"mod+shift+7" = "move-to-bookmark 7"
+"mod+shift+8" = "move-to-bookmark 8"
+"mod+shift+9" = "move-to-bookmark 9"
+"mod+shift+0" = "move-to-bookmark 10"
+"mod+shift+minus" = "move-to-bookmark 11"
+"mod+shift+equal" = "move-to-bookmark 12"
+"mod+shift+F1" = "move-to-bookmark 13"
+"mod+shift+F2" = "move-to-bookmark 14"
+"mod+shift+F3" = "move-to-bookmark 15"
 
-# Bottom Row (Y = -3000)
-"mod+9" = "go-to -4500 -3000"
-"mod+0" = "go-to -1500 -3000"   # Workspace 10
-"mod+minus" = "go-to 1500 -3000" # Workspace 11
-"mod+equal" = "go-to 4500 -3000"   # Workspace 12
-"mod+bracketleft" = "go-to 6000 -3000"  # Workspace 13
-
-# Return to the center origin
-"mod+space" = "home-toggle"
+# --- System & Panic Button ---
+"mod+shift+r" = "reload-config"
+"mod+c" = "center-window"
 
 [mouse]
 # # When true (default), dragging a window's edge or corner resizes it via the
