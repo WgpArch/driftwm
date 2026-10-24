@@ -45,6 +45,10 @@
         "9": "",
         "10": "",
         "11": "",
+        "12": " ",
+        "13": "", 
+        "14": "", 
+        "1": "",
         "default": ""
 
     },
@@ -70,13 +74,13 @@
 
     "custom/launcher": {
         "format": "   ",
-        "on-click": "rofi -show drun -theme /usr/share/rofi/themes/fancy.rasi",
+        "on-click": "rofi -show drun -theme ~/.config/driftwm/rofi/fancy.rasi",
         "tooltip": true,
-        "tooltip-format": "false"
+        "tooltip-format": "btw 😎"
     },
 
     "custom/weather": {
-        "exec": "~/.config/waybar/scripts/weather.py",
+        "exec": "WEATHER_API_KEY='8bcd81d07c9ef5a23dd709885254d64c' python3 ~/.config/waybar/scripts/weather.py",
         "interval": 300,
         "return-type": "json",
         "tooltip": true
@@ -195,7 +199,7 @@
 
     "custom/power": {
         "format": " ⏻ ",
-        "on-click": "/usr/local/bin/powermenu.sh",
+        "on-click": "~/.config/driftwm/rofi/powermenu.sh",
         "tooltip": false
     },
  }
