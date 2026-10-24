@@ -253,7 +253,7 @@ tooltip {
 
 tooltip label {
     color: #909090;
-    font-family: "Z003", "JetBrainsMono Nerd Font", "Font Awesome 7 Free";
+    font-family: "Z003', 'Font Awesome 6 Free', 'Font Awesome 6 Brands";
     font-size: 13px;
 }
 
@@ -263,7 +263,7 @@ tooltip label {
     color: #909090;
     border: 1px solid #00BFFF; 
     border-radius: 8px;
-    font-family: "Z003", "JetBrainsMono Nerd Font", "Font Awesome 7 Free";
+    font-family: "Z003', 'Font Awesome 6 Free', 'Font Awesome 6 Brands";
     font-size: 13px;
 }
 
